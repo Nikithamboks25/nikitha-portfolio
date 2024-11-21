@@ -1,4 +1,3 @@
-/* General Reset */
 body {
   margin: 0;
   padding: 0;
@@ -7,12 +6,12 @@ body {
 
 /* Navbar adjustments */
 .navbar {
-  position: fixed; /* Keeps the navbar at the top */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px; /* Adjust height as needed */
-  background-color: #333; /* Example background color */
+  height: 60px; 
+  background-color: #333; 
   color: white;
   display: flex;
   align-items: center;
@@ -23,10 +22,10 @@ body {
 
 /* .projects Section Fix */
 .projects {
-  padding: 120px 20px 50px; /* Top padding accounts for navbar height */
+  padding: 120px 20px 50px; 
   text-align: center;
   background-color: #f4f4f4;
-  min-height: calc(100vh - 60px); /* Ensures full-page coverage minus navbar */
+  min-height: calc(100vh - 60px); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +91,7 @@ body {
 }
 
 .project-links a:hover {
-  color: #1d4ed8; /* Blue color on hover */
+  color: #1d4ed8; 
 }
 
 /* Responsive Design */
