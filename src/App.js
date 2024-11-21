@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/Scroll';
 import Home from './pages/Home';
 import Projects from './pages/Project';
 import Achievements from './pages/Achievements';
@@ -13,6 +14,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <ScrollToTop />
         <div className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
