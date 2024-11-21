@@ -42,7 +42,7 @@ const ContactUs = () => {
 
   return (
     <div className="contact-container">
-      <h1>Contact Us</h1>
+      <h2>Contact Us</h2>
       <div className="card">
         <form onSubmit={handleSubmit}>
           <label>Name:</label>
