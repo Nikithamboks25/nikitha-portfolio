@@ -1,4 +1,21 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container takes full height of the viewport */
+}
+
+.main-content {
+  flex: 1; /* Makes sure the main content takes up all available space */
+}
+
 /* Footer Styles */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
 .footer {
     background-color: black;
     color: white;
@@ -14,13 +31,18 @@
   
   .footer-icon {
     font-size: 2rem;
-    color: #4c5270; /* Purple color scheme */
+    color: darkolivegreen; 
     transition: color 0.3s ease;
   }
   
   .footer-icon:hover {
-    color: #a29bfe; /* Lighter purple on hover */
+    color: rgb(114, 141, 69); /* Lighter purple on hover */
     transform: scale(1.1); /* Slight zoom effect */
     transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .footer-title p{
+    color: white;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
   }
   

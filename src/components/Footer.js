@@ -5,9 +5,12 @@ import "./../components/Footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
+        <div className='footer-title'>
+            <p>Keep in Touch</p>
+        </div>
       <div className="footer-content">
         <a
-          href="https://github.com/your-username" // Replace with your GitHub profile
+          href="https://github.com/Nikithamboks25" // Replace with your GitHub profile
           target="_blank"
           rel="noopener noreferrer"
           className="footer-icon"
@@ -15,7 +18,7 @@ const Footer = () => {
           <FaGithub />
         </a>
         <a
-          href="https://linkedin.com/in/your-username" // Replace with your LinkedIn profile
+          href="https://www.linkedin.com/in/nikitha-mbokotwana-2a5a82159/" // Replace with your LinkedIn profile
           target="_blank"
           rel="noopener noreferrer"
           className="footer-icon"
