@@ -1,0 +1,101 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 50px;
+    height: 100vh;
+}
+
+.welcome-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.welcome-message {
+    max-width: 50%;
+}
+
+.welcome-message h1 {
+    font-size: 3rem;
+}
+
+.welcome-message p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: darkolivegreen;
+}
+
+.welcome-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.welcome-buttons button,
+.resume-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: darkolivegreen;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none; 
+    text-align: center; 
+    margin-left: 15%;
+    gap: 1px;
+}
+
+.welcome-buttons button:hover,
+.resume-button:hover {
+    background-color: darkolivegreen;
+    color: white;
+}
+
+/* Profile Picture */
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.profile-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 55%;
+    border: 5px solid darkolivegreen;
+}
+
+/* About Section */
+.about-section {
+    background-color: white;
+    color: black;
+    padding: 50px;
+    height: 100vh;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+}
+
+.about-section p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #4c5270;
+}
