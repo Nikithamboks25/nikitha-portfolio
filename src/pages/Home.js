@@ -1,12 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./../styles/Home.css";
 import ProfileImage from "./../assets/nikitha.jpg";
-import Resume from "./../assets/resume.pdf"; // Add your resume file here
+import Resume from "./../assets/resume.pdf";
+import ReactIcon from "../assets/react.png";
+import JavaScriptIcon from './../assets/js.png';
+import CSSIcon from './../assets/files.png';
+import HTMLIcon from './../assets/html.png';
+import NodeIcon from './../assets/node.png';
+import MongoDBIcon from './../assets/database.png';
+import ProblemSolvingIcon from './../assets/idea.png';
+import CommunicationIcon from './../assets/conversation.png';
+import CollaborationIcon from './../assets/united.png';
+
+const skillsData = [
+  { name: 'React', description: 'A JavaScript library for building user interfaces.', icon: ReactIcon },
+  { name: 'JavaScript', description: 'Programming language for web development.', icon: JavaScriptIcon },
+  { name: 'CSS', description: 'Style sheet language for designing web pages.', icon: CSSIcon },
+  { name: 'HTML', description: 'Markup language for structuring web pages.', icon: HTMLIcon },
+  { name: 'Node.js', description: 'JavaScript runtime for building server-side applications.', icon: NodeIcon },
+  { name: 'MongoDB', description: 'NoSQL database for modern web applications.', icon: MongoDBIcon },
+  { name: 'Problem-Solving', description: 'Ability to approach complex problems and find solutions.', icon: ProblemSolvingIcon },
+  { name: 'Communication', description: 'Clear, concise, and effective communication.', icon: CommunicationIcon },
+  { name: 'Collaboration', description: 'Working together to achieve common goals.', icon: CollaborationIcon }
+];
 
 const Home = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const scrollToAbout = () => {
     document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % skillsData.length);
+    }, 3000); // Change skill every 3 seconds
+
+    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+  }, []);
+
+  const { name, description, icon } = skillsData[currentIndex];
 
   return (
     <div>
@@ -23,7 +56,7 @@ const Home = () => {
           </div>
           <div className="profile-picture">
             <img
-              src={ProfileImage} 
+              src={ProfileImage}
               alt="Profile"
               className="profile-image"
             />
@@ -34,11 +67,18 @@ const Home = () => {
       {/* Section 2: About Me */}
       <section id="about-section" className="about-section">
         <h2>About Me</h2>
-        <p>
-          Hi, I'm Nikitha Mbokotwana, a passionate developer with skills in React, JavaScript,
-          and other web technologies. I am constantly learning and striving to create
-          impactful digital solutions. Let's connect and build something amazing!
-        </p>
+        <p>Hi, I'm Nikitha Mbokotwana, I am an individual who is eager of constant learning and striving to create
+          impactful digital solutions. I hold the below technical and soft skills:</p>
+        <div className="carousel-container">
+          <div className="carousel">
+            <div className="carousel-item">
+              <img src={icon} alt={name} className="skill-icon" />
+              <h3 className="skill-name">{name}</h3>
+              <p className="skill-description">{description}</p>
+            </div>
+          </div>
+          <p>Lets Connect and build something great!!</p>
+        </div>
       </section>
     </div>
   );

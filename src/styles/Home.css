@@ -28,19 +28,26 @@ body, html {
 }
 
 .welcome-message h1 {
-    font-size: 3rem;
+    font-size: 6rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
 .welcome-message p {
     margin: 20px 0;
     font-size: 1.2rem;
     color: darkolivegreen;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+/* Welcome Buttons */
 .welcome-buttons {
     margin-top: 20px;
     display: flex;
-    gap: 15px;
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px; 
 }
 
 .welcome-buttons button,
@@ -55,8 +62,6 @@ body, html {
     font-weight: bold;
     text-decoration: none; 
     text-align: center; 
-    margin-left: 15%;
-    gap: 1px;
 }
 
 .welcome-buttons button:hover,
@@ -74,10 +79,10 @@ body, html {
 }
 
 .profile-image {
-    width: 350px;
-    height: 350px;
-    border-radius: 55%;
-    border: 5px solid darkolivegreen;
+    width: 350px; /* Increased size */
+    height: 350px; /* Match width for a perfect circle */
+    border-radius: 50%; /* Ensures circular shape */
+    border: 8px solid darkolivegreen; /* Thicker border line */
 }
 
 /* About Section */
@@ -93,9 +98,85 @@ body, html {
     font-size: 2.5rem;
 }
 
+/* Carousel */
+.carousel-container {
+    text-align: center;
+    margin-top: 30px; 
+    width: 90%; 
+    max-height: 900px;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-icon {
+    width: 120px; /* Increased size for icon */
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.skill-name {
+    font-size: 1.8rem; /* Slightly larger font size */
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.skill-description {
+    font-size: 1.2rem; 
+    color: #666;
+    font-weight: bold; 
+}
+
+/* Align Paragraphs in About Section */
 .about-section p {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #4c5270;
+    font-weight: bold;
+    text-align: center; 
+    font-size: 1.2rem; 
+    color: #444; 
+    margin-top: 30px; 
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.prev, .next {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: #45a049;
+}
+
+.prev:focus, .next:focus {
+    outline: none;
 }
