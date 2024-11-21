@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="logo">
-        <h2>Nikitha Mbokotwana</h2>
+      <h2><em>NM</em> <span className="code-symbol"> &lt;/&gt; </span></h2>
       </div>
       <ul>
         <li><Link to="/">Home</Link></li>

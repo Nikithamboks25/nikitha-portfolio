@@ -1,40 +1,105 @@
 /* src/Navbar.css */
 nav {
-    background-color: black;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: black;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo h2 {
+  color: darkolivegreen ;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.logo em {
+  font-style: italic;
+}
+
+.code-symbol {
+  font-family: 'Courier New', Courier, monospace;  /* Monospace font for code */
+  font-size: 1rem;
+  color: white; 
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+  overflow-x: auto;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+ul li a:hover {
+  color: #4c5270;
+}
+
+/* Media Query for tablets */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
   }
-  
+
   .logo h2 {
-    color: white;
-    font-size: 1.8rem;
-    margin: 0;
+    font-size: 1.5rem;
   }
-  
+
   ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    justify-content: center;
   }
-  
+
   ul li {
-    margin-right: 20px;
-  }
-  
-  ul li:last-child {
     margin-right: 0;
+    margin-bottom: 10px;
   }
-  
+
   ul li a {
-    color: white;
-    text-decoration: none;
+    font-size: 1rem;
+  }
+}
+
+/* Media Query for mobile phones */
+@media (max-width: 480px) {
+  .logo h2 {
     font-size: 1.2rem;
   }
-  
-  ul li a:hover {
-    color: #4CAF50; /* Optional: Change color on hover */
+
+  ul li a {
+    font-size: 0.9rem;
   }
-  
+
+  ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+  }
+
+  ul li {
+    margin-bottom: 10px;
+  }
+}
