@@ -32,10 +32,11 @@ body, html {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .welcome-message p {
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 1.2rem;
     color: darkolivegreen;
     font-family: 'Times New Roman', Times, serif;
