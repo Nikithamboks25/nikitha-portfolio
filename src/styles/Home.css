@@ -121,7 +121,7 @@ body, html {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
-    align-self: center;
+    text-align: center;
 }
 
 .title-with-lines {
