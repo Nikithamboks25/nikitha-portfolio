@@ -28,7 +28,7 @@ body, html {
 }
 
 .welcome-message h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -39,15 +39,18 @@ body, html {
     font-size: 1.2rem;
     color: darkolivegreen;
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 /* Welcome Buttons */
 .welcome-buttons {
     margin-top: 20px;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    gap: 15px; 
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .welcome-buttons button,
@@ -60,8 +63,8 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    text-decoration: none; 
-    text-align: center; 
+    text-decoration: none;
+    text-align: center;
 }
 
 .welcome-buttons button:hover,
@@ -79,10 +82,10 @@ body, html {
 }
 
 .profile-image {
-    width: 350px; /* Increased size */
-    height: 350px; /* Match width for a perfect circle */
-    border-radius: 50%; /* Ensures circular shape */
-    border: 8px solid darkolivegreen; /* Thicker border line */
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 8px solid darkolivegreen;
 }
 
 /* About Section */
@@ -91,28 +94,73 @@ body, html {
     color: black;
     padding: 50px;
     height: 100vh;
-    text-align: center;
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+    justify-content: center;
+    text-align: left;
 }
 
-.about-section h2 {
+/* Flex container for About Section content */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 250px; 
+    margin-top: 90px; 
+}
+
+/* About left section */
+.about-left {
+    flex: 1;
+    max-width: 50%; 
+}
+
+.about-left h2 {
     font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    align-self: center;
 }
 
-/* Carousel */
+.title-with-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.title-with-lines .line {
+    flex: 1;
+    border: 0;
+    border-top: 2px solid #333;
+}
+
+.title-with-lines span {
+    margin: 0 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkolivegreen;
+}
+
+.about-left p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 20px;
+}
+
+/* Carousel Section (right) */
 .carousel-container {
+    flex: 1;
+    max-width: 250%; 
     text-align: center;
-    margin-top: 30px; 
-    width: 90%; 
-    max-height: 900px;
-    max-width: 800px; 
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30px; 
+    margin-top: 90px;
 }
 
 .carousel {
     position: relative;
     width: 100%;
-    margin: 0 auto;
     background-color: #f8f8f8;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -128,55 +176,20 @@ body, html {
 }
 
 .skill-icon {
-    width: 120px; /* Increased size for icon */
+    width: 120px;
     height: 120px;
     object-fit: contain;
     margin-bottom: 1rem;
 }
 
 .skill-name {
-    font-size: 1.8rem; /* Slightly larger font size */
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
     color: #333;
 }
 
 .skill-description {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     color: #666;
-    font-weight: bold; 
-}
-
-/* Align Paragraphs in About Section */
-.about-section p {
     font-weight: bold;
-    text-align: center; 
-    font-size: 1.2rem; 
-    color: #444; 
-    margin-top: 30px; 
-}
-
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-.prev, .next {
-    background-color: #4caf50;
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.prev:hover, .next:hover {
-    background-color: #45a049;
-}
-
-.prev:focus, .next:focus {
-    outline: none;
 }

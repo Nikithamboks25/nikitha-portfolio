@@ -66,18 +66,28 @@ const Home = () => {
 
       {/* Section 2: About Me */}
       <section id="about-section" className="about-section">
-        <h2>About Me</h2>
-        <p>Hi, I'm Nikitha Mbokotwana, I am an individual who is eager of constant learning and striving to create
-          impactful digital solutions. I hold the below technical and soft skills:</p>
-        <div className="carousel-container">
-          <div className="carousel">
-            <div className="carousel-item">
-              <img src={icon} alt={name} className="skill-icon" />
-              <h3 className="skill-name">{name}</h3>
-              <p className="skill-description">{description}</p>
+        <div className="about-content">
+          <div className="about-left">
+            <h2>Nikitha Mbokotwana</h2>
+            <div className="title-with-lines">
+              <hr className="line" />
+              <span>Full Stack Developer</span>
+              <hr className="line" />
+            </div>
+            <p>I am a Full-stack developer that holds a Diploma in Application Development qualification obtained from the Cape Peninsula University of Technology.  I specialize in web technologies and have built a strong foundation in both front-end and back-end development. 
+              My technical and soft skills, which are highlighted on the beside the carousel, reflect my versatile capabilities. 
+              Passionate about continuous learning, I am always striving to create impactful digital solutions. 
+              I am dedicated to delivering high-quality work that addresses real-world challenges through innovative and efficient development practices.</p>
+          </div>
+          <div className="carousel-container">
+            <div className="carousel">
+              <div className="carousel-item">
+                <img src={icon} alt={name} className="skill-icon" />
+                <h3 className="skill-name">{name}</h3>
+                <p className="skill-description">{description}</p>
+              </div>
             </div>
           </div>
-          <p>Lets Connect and build something great!!</p>
         </div>
       </section>
     </div>
